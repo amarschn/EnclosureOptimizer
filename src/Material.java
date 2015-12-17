@@ -1,39 +1,20 @@
-
 /**
+ *
+ * All materials will follow this interface.
  * 
  * @author drew
- * 
- *         All enclosure materials will be defined by this class
  *
  */
-public class Material {
+public interface Material {
+    public String getName();
 
-    private String name;
-    private double massDensity;
-    private double costDensity;
-    private double thermalConductivity;
+    public double getMassDensity();
 
-    public Material(String n, double mDensity, double cDensity, double tC) {
-        this.name = n;
-        this.massDensity = mDensity;
-        this.costDensity = cDensity;
-        this.thermalConductivity = tC;
-    }
+    public double getCostDensity();
 
-    public String getName() {
-        return name;
-    }
+    public double getThermalConductivity();
 
-    public double getMassDensity() {
-        return massDensity;
-    }
+    public double getYieldStrength();
 
-    public double getCostDensity() {
-        return costDensity;
-    }
-
-    public double getThermalConductivity() {
-        return thermalConductivity;
-    }
-
+    public double getMachineCost();
 }
